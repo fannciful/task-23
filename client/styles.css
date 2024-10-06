@@ -1,0 +1,164 @@
+/* Скидання стилів списку */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Основні стилі тіла документа */
+body {
+    background-color: #f0f8ff; /* Світлий фон */
+    font-family: 'Arial', sans-serif; /* Використовуйте сучасний шрифт */
+    line-height: 1.6; /* Збільшує інтервал між рядками */
+    color: #333; /* Темний текст для контрасту */
+}
+
+/* Основні стилі контейнера завдань */
+.todo {
+    max-width: 600px; /* Ширина контейнера */
+    margin: 20px auto; /* Центрування контейнера */
+    padding: 20px; /* Внутрішній відступ */
+    background-color: #fff; /* Білий фон для контенту */
+    border-radius: 8px; /* Закруглені кути */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Тінь для глибини */
+}
+
+/* Стилі для заголовка */
+.todo h2 {
+    text-align: center; /* Центрування заголовка */
+    color: #004085; /* Темно-синій колір заголовка */
+}
+
+/* Стилі для контейнера поля вводу та кнопки */
+.input-container {
+    display: flex; /* Вирівнювання в рядок */
+    justify-content: space-between; /* Вирівнювання елементів */
+    align-items: center; /* Центрування по вертикалі */
+    margin-bottom: 10px; /* Відстань між контейнером та іншими елементами */
+}
+
+/* Стилі для поля вводу завдання */
+.todo-input {
+    width: 75%; /* Зменшуємо ширину поля вводу, щоб залишити місце для кнопки */
+    padding: 10px; /* Внутрішні відступи */
+    border: 1px solid #ced4da; /* Світла обводка */
+    border-radius: 4px; /* Закруглені кути */
+    font-size: 16px; /* Розмір шрифту */
+    transition: border-color 0.3s ease; /* Анімація кольору обводки */
+}
+
+.todo-input:focus {
+    border-color: #007bff; /* Синя обводка при фокусуванні */
+    outline: none; /* Без обводки */
+}
+
+/* Стилі для кнопки "Додати" */
+.add-todo-btn {
+    background-color: #007bff; /* Синій фон */
+    color: white; /* Білий текст */
+    border: none; /* Без обводки */
+    border-radius: 4px; /* Закруглені кути */
+    padding: 12px 18px; /* Збільшуємо внутрішні відступи для збільшення кнопки */
+    cursor: pointer; /* Курсор на кнопці */
+    transition: background-color 0.3s ease; /* Анімація фону */
+    margin-left: 10px; /* Відстань між полем вводу та кнопкою */
+    font-size: 16px; /* Збільшений розмір шрифту */
+}
+
+.add-todo-btn:hover {
+    background-color: #0056b3; /* Темніший фон при наведенні */
+}
+
+/* Стилі для кнопок */
+.btn-custom-blue {
+    background-color: #004085; /* Темно-синій фон */
+    border: none; /* Без обводки */
+    border-radius: 4px; /* Закруглені кути */
+    color: white; /* Білий текст */
+    padding: 10px 15px; /* Внутрішні відступи */
+    cursor: pointer; /* Курсор на кнопках */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Анімації для кнопок */
+    width: 100%; /* Ширина кнопки */
+    font-size: 16px; /* Розмір шрифту */
+}
+
+.btn-custom-blue:hover {
+    background-color: #002752; /* Темніший фон при наведенні */
+    transform: translateY(-2px); /* Легка анімація при наведенні */
+}
+
+/* Стилі для елементів списку завдань */
+.todo-list-item {
+    display: flex; /* Відображення в ряд */
+    justify-content: space-between; /* Розміщення кнопок праворуч */
+    align-items: center; /* Центрування по вертикалі */
+    padding: 15px; /* Внутрішні відступи */
+    background-color: #f8f9fa; /* Світло-сірий фон */
+    border: 1px solid #dee2e6; /* Світла обводка */
+    border-radius: 4px; /* Закруглені кути */
+    margin-bottom: 10px; /* Відстань між елементами */
+    transition: background-color 0.3s ease; /* Анімація фону */
+}
+
+.todo-list-item:hover {
+    background-color: #e9ecef; /* Світліший фон при наведенні */
+}
+
+/* Стилі для тексту завдань */
+.todo-list-item-text {
+    flex: 1; /* Займає доступний простір */
+    font-size: 16px; /* Розмір шрифту */
+    word-wrap: break-word; /* Перенос слів */
+}
+
+/* Стилі для кнопок редагування та видалення */
+.edit-todo-btn,
+.delete-todo-btn {
+    background-color: #007bff; /* Синій фон */
+    color: white; /* Білий текст */
+    border: none; /* Без обводки */
+    border-radius: 4px; /* Закруглені кути */
+    padding: 5px 10px; /* Внутрішні відступи */
+    margin-left: 10px; /* Відстань між кнопками */
+    cursor: pointer; /* Курсор на кнопках */
+    transition: background-color 0.3s ease; /* Анімація фону */
+}
+
+.edit-todo-btn:hover {
+    background-color: #0056b3; /* Темніший фон при наведенні */
+}
+
+.delete-todo-btn {
+    background-color: #dc3545; /* Червоний фон для видалення */
+}
+
+.delete-todo-btn:hover {
+    background-color: #c82333; /* Темніший червоний при наведенні */
+}
+
+/* Стиль для активного стану редагування */
+.todo-list-item.editing {
+    background-color: #e0e7ff; /* Світліший фон під час редагування */
+    border: 1px solid #6a5acd; /* Трохи темніша рамка */
+}
+
+/* Стилі для кнопок збереження та скасування */
+.save-todo-btn,
+.cancel-todo-btn {
+    background-color: #28a745; /* Зелений фон */
+    color: white; /* Білий текст */
+    border: none; /* Без обводки */
+    border-radius: 4px; /* Закруглені кути */
+    padding: 5px 10px; /* Внутрішні відступи */
+    margin-left: 10px; /* Відстань між кнопками */
+    cursor: pointer; /* Курсор на кнопках */
+    transition: background-color 0.3s ease; /* Анімація фону */
+}
+
+.cancel-todo-btn {
+    background-color: #dc3545; /* Жовтий фон для скасування */
+}
+
+.cancel-todo-btn:hover {
+    background-color: #c82333; /* Темніший жовтий при наведенні */
+}
